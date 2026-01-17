@@ -1378,6 +1378,16 @@ The Clients
   top: 30px;
 }
 
+.price1 {
+  font-size: 24px;
+  color: #fff;
+  position: absolute;
+  font-weight: 700;
+  z-index: 1;
+  left: 30px;
+  top: 30px;
+}
+
 .pricing-item-regular h4 {
   font-size: 20px;
   font-weight: 700;
