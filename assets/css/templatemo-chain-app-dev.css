@@ -141,6 +141,7 @@ html,
 body {
   background: #fff;
   font-family: 'Roboto', sans-serif;
+  line-height: 22px; 
 }
 
 ::selection {
@@ -895,42 +896,58 @@ Banner Style
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  padding: 100px 20px;
+  padding: 80px 20px;
   padding-left: 0px;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
+}
+
+.texto-completo{
+  margin-left: -90px;
+  margin-top: 50px;
 }
 
 .main-banner:after {
   content: '';
   background-image: url(../images/slider-left-dec.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 750px 640px;
   position: absolute;
-  left: 5px;
-  top: -60px;
-  width: 100%;
-  height: 100%;
+  left: 2px;
+  bottom: 24px;
+  width: 90%; 
+  height: 111%;
   z-index: 1;
 }
 
 .main-banner .left-content {
-  margin-right: 15px;
+  margin-right: 5px;
 }
 
 .main-banner .left-content h2 {
   z-index: 2;
   position: relative;
   font-weight: 700;
-  line-height: 55px;
+  line-height: 38px;
   font-size: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
+  color: #FFF;
 }
 
+.left-content {
+  margin-left: 10%;
+  text-align: left; 
+}
+
+@media (max-width: 991px) {
+  .left-content {
+    margin-left: 0;
+  }
+}
 
 .msg-princ{
   font-size: 45px;
-  color: rgb(36, 26, 26);
+  color: rgb(255, 255, 255);
 }
 
 .msg-subt{
@@ -939,12 +956,15 @@ Banner Style
 }
 
 .main-banner .left-content p {
-  margin-bottom: 4px;
-  color: #272727;
-  line-height: 20px;
+  margin-bottom: 40px;
+  color: #000000; 
   font-weight: 400;
-
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.85);
+  -webkit-background-clip: text; 
+  background-clip: text;
 }
+
 
 .main-banner .left-content .first-button {
   margin-right: 55px;
@@ -965,9 +985,6 @@ Banner Style
   margin-left: 150px;
 }
 
-.main-banner .right-image img {
-  max-width: 510px;
-}
 
 .main-banner .left-content .white-button a {
   background-color: #4b8ef1;
@@ -981,7 +998,7 @@ Services Style
 */
 
 .services {
-  padding-top: 130px;
+  padding-top: 40px;
   position: relative;
 }
 
@@ -1189,6 +1206,91 @@ About Us
   z-index: 0;
 }
 
+.storytelling-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  position: relative;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.step-item {
+  background: #ffffff;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.08);
+  border-radius: 20px;
+  padding: 30px 25px;
+  width: 280px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.step-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+}
+
+.step-number {
+  background: linear-gradient(135deg, #4b8ef1, #28e1fd);
+  color: #fff;
+  font-weight: 700;
+  font-size: 22px;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  margin: 0 auto 15px;
+}
+
+.step-item h6 {
+  color: #2a2a2a;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.step-item p {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.step-arrow {
+    display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  font-size: 36px !important;
+  color: #4b8ef1 !important;
+  font-weight: bold;
+  margin-top: -10px !important;
+  margin-bottom: -10px !important;
+  z-index: 10 !important;
+}
+
+.about-footer {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 16px;
+}
+
+.about-footer p {
+  margin: 5px 0;
+}
+
+@media (max-width: 991px) {
+  .storytelling-steps {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .step-arrow {
+    transform: rotate(90deg);
+    margin: 0;
+  }
+}
 
 
 /* 
@@ -1198,7 +1300,7 @@ The Clients
 */
 
 .the-clients {
-  margin-top: 130px;
+  margin-top: 50px;
 }
 
 .the-clients  .section-heading {
@@ -1348,13 +1450,11 @@ The Clients
 
 .pricing-tables  .section-heading {
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 .pricing-tables  .section-heading p {
   margin-top: 10px;
-  margin-left: 18%;
-  margin-right: 18%;
 }
 
 .pricing-item-regular {
@@ -1446,7 +1546,7 @@ The Clients
 .pricing-item-pro {
   box-shadow: 0px 0px 15px rgba(0,0,0,0.07);
   border-radius: 50px;
-  padding: 120px 30px;
+  padding: 85px 30px;
   text-align: center;
   position: relative;
   z-index: 1;
@@ -1488,13 +1588,14 @@ The Clients
 }
 
 .pricing-item-pro h4 {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 30px;
+   font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: 30px;
 }
 
 .pricing-item-pro .icon img {
-  width: 120px;
+  width: 80px;
   height: 106px;
   margin-bottom: 30px;
 }
@@ -1608,7 +1709,7 @@ footer {
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: 130px;
+  margin-top: 80px;
   padding-top: 300px;
   padding-bottom: 60px;
 }
