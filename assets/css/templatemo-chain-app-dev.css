@@ -649,23 +649,7 @@ header
   }
 }
 
-@media (max-width: 992px) {
-  .header-area .main-nav .nav li:last-child  ,
-  .background-header .main-nav .nav li:last-child {
-    color: #069;
-  }
-  .header-area .main-nav .nav li:nth-child(6),
-  .background-header .main-nav .nav li:nth-child(6) {
-    padding-right: 0px;
-  }
-  .background-header .nav li a.active:after {
-    display: none;
-  }
-  .services .section-heading p {
-    margin-top: 10px;
-    margin-left: 30px!important;
-}
-}
+
 
 @media (max-width: 767px) {
   /* Esconde infos extras do topo */
@@ -770,7 +754,7 @@ header
 
   /* 🔹 Ajusta o banner para mobile */
   .main-banner {
-    margin-top: 100px !important;
+    margin-top: 40px !important;
     padding: 40px 15px;
     position: relative;
     overflow: hidden;
@@ -940,6 +924,16 @@ Banner Style
   overflow: visible;
 }
 
+.main-banner img{
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 80px 20px;
+  padding-left: 0px;
+  position: relative;
+  overflow: visible;
+}
+
 .texto-completo{
   margin-left: -90px;
   margin-top: 50px;
@@ -981,6 +975,10 @@ Banner Style
   .left-content {
     margin-left: 0;
   }
+}
+
+.main-banner img {
+  display: none;
 }
 
 .msg-princ{
@@ -2208,118 +2206,115 @@ responsive
     margin-bottom: 20px;
   }
 
-  .main-banner .left-content p {
-    margin-bottom: 45px;
+  /*.main-banner .left-content p {
+    margin-bottom: 45px;*/
   }
-}
 
 @media (max-width: 992px) {
+  /* ===== Ajustes gerais para tablets e telas médias ===== */
   .header-area {
     background-color: #fff;
   }
-  .main-banner:after {
+
+  .header-area .main-nav .nav li:last-child,
+  .background-header .main-nav .nav li:last-child {
+    color: #069;
+  }
+
+  .header-area .main-nav .nav li:nth-child(6),
+  .background-header .main-nav .nav li:nth-child(6) {
+    padding-right: 0px;
+  }
+
+  .background-header .nav li a.active:after {
     display: none;
-  } 
+  }
+
+  /* ===== Banner ===== */
+   .main-banner {
+    text-align: center;
+    padding: 150px 0 30px 0;
+    background-image: none !important; /* remove o fundo anterior */
+    background: linear-gradient(
+      to bottom,
+      #a9ccf0 0%,     /* azul clarinho no topo */
+      #e3efff 70%,    /* transição suave */
+      #ffffff 100%    /* totalmente branco no final */
+    ) !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .main-banner:after {
+    display: none; 
+  }
+
+  .main-banner .left-content {
+    margin: 0 auto;
+    text-align: center;
+  }
+
   .main-banner .left-content h2 {
     color: #2a2a2a;
-    margin-right: 0;
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 20px;
   }
+
   .main-banner .left-content p {
-    color: #000000;
+    color: #000;
     margin-right: 0;
   }
-  .main-banner .left-content .white-button a {
-    background-color: #4b8ef1;
-    color: #fff !important;
-  }
-  form#contact {
-    overflow: hidden;
-  }
-  .header-area .main-nav .logo h4 {
-    font-size: 20px;
-  }
-  .main-banner .left-content {
-    margin-right: 0px;
-  }
-  .main-banner {
-    text-align: center;
-    padding: 226px 0px 30px 0px;
-  }
-  .main-banner:before {
-    display: none;
-  }
+
   .main-banner .right-image {
-    margin: 30px auto 0px auto;
+    margin: 30px auto 0;
     text-align: center;
   }
-  .features-item {
-    margin-bottom: 45px;
+
+  /* ===== Seções e componentes ===== */
+  .services .section-heading p {
+    margin-top: 10px;
+    margin-left: 30px !important;
   }
-  .last-features-item,
-  .last-skill-item {
-    margin-bottom: 0px !important;
-  }
-  .skill-item {
-    margin-bottom: 30px;
-  }
-  .about-left-image img {
-    margin-right: 0px;
-    margin-bottom: 45px;;
-  }
-  .services .naccs .menu div {
-    font-size: 15px;
-    font-weight: 500;
-  }
+
   .service-item {
     text-align: center;
     margin-bottom: 30px;
   }
-  .about-us .box-item {
+
+  .about-us .section-heading,
+  .about-us .right-image,
+  .about-us .about-item {
     text-align: center;
+    margin: 0 auto;
   }
-  .about-us:after {
-    display: none;
-  }
-  .about-us .gradient-button,
-  .about-us span {
-    text-align: center;
-    display: block;
-  }
-  .about-us .right-image {
-    margin-top: 30px;
-  }
-  .service-item .icon {
-    margin: 0 auto 30px auto;
-  }
-  .about-us .section-heading {
-    text-align: center;
-  }
-  .about-us .left-image {
-    margin-right: 30px;
-    margin-left: 30px;
-    margin-bottom: 45px;
-  }
+
   .blog-posts {
-    margin-left: 0px;
     margin-top: 30px;
   }
+
   .post-item {
-    margin-bottom: 70px;
+    margin-bottom: 50px;
   }
+
   .pricing-item-regular {
     margin-bottom: 30px;
   }
-  .our-portfolio .owl-nav {
-    display: none !important;
-  }
+
   .contact-info {
     margin-top: 60px;
   }
+
   form#contact {
     padding: 45px;
+    overflow: hidden;
+  }
+
+  .our-portfolio .owl-nav {
+    display: none !important;
   }
 }
-
 
 
 /* ===================================================
@@ -2436,9 +2431,6 @@ responsive
   }
 
   .main-banner:after {
-  background-image: url(../images/slider-left-dec.png);
-  background-repeat: no-repeat;
-  background-size: 750px 640px;
   position: absolute;
   left: 2px;
   bottom: 24px;
@@ -2462,8 +2454,9 @@ responsive
   }
 
   .msg-subt, .msg-dentro {
-    font-size: 14px;
-    line-height: 20px;
+    margin-top: 5px;
+    font-size: 18px;
+    line-height: 25px;
   }
   
 }
