@@ -985,7 +985,7 @@ Banner Style
 
 .msg-princ{
   font-size: 45px;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
 }
 
 .msg-subt{
@@ -2225,7 +2225,7 @@ responsive
     margin-right: 0;
   }
   .main-banner .left-content p {
-    color: #ffffff;
+    color: #000000;
     margin-right: 0;
   }
   .main-banner .left-content .white-button a {
@@ -2454,6 +2454,11 @@ responsive
 
   .msg-princ {
     font-size: 28px;
+    color: #000000 !important;
+  }
+
+  em.msg-princ {
+    color: #000000 !important;
   }
 
   .msg-subt, .msg-dentro {
