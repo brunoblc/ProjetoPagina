@@ -191,3 +191,26 @@ wow = new WOW(
   }
 );
 wow.init();
+
+const depoimentoImgs = [
+  "assets/images/depoimento_whats.jpeg",
+  "assets/images/chat-jake.jpg",
+  "assets/images/chat-may.jpg",
+  "assets/images/chat-random.jpg",
+  "assets/images/chat-mark.jpg"
+];
+
+document.querySelectorAll('.menu > div').forEach((item, index) => {
+  item.addEventListener('click', () => {
+    if (window.innerWidth > 767) return;
+
+    const img = document.getElementById('mobileDepoimentoImg');
+    img.src = depoimentoImgs[index];
+
+    document.getElementById('mobileDepoimento').classList.add('active');
+  });
+});
+
+function closeDepoimento() {
+  document.getElementById('mobileDepoimento').classList.remove('active');
+}
