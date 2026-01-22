@@ -2556,3 +2556,52 @@ responsive
     cursor: pointer;
   }
 }
+
+
+@media (max-width: 991px) {
+   .main-banner {
+    text-align: center;
+    padding: 150px 0 30px;
+    background-image: none !important; 
+    background: linear-gradient(
+      to bottom,
+      #a9ccf0 0%,    
+      #e3efff 70%,    
+      #ffffff 100%    
+    ) !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-size: contain;
+  }
+
+   .main-banner:after {
+    display: none ; 
+  }
+
+  .main-banner .right1-image img {
+    display: none;
+  }
+
+  .main-banner .left-content {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .main-banner .left-content h2 {
+    color: #2a2a2a;
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 20px;
+  }
+
+  .main-banner .left-content p {
+    color: #000;
+    margin-right: 0;
+  }
+
+  .main-banner .right-image {
+    margin: 30px auto 0;
+    text-align: center;
+  }
+}
