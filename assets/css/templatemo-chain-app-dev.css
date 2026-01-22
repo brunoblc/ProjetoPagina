@@ -288,6 +288,10 @@ body {
   color: #fff !important;
 }
 
+  .left-content {
+    margin-left: 0;
+  }
+
 
 /* 
 ---------------------------------------------
@@ -754,40 +758,8 @@ header
   }
 
   /* 🔹 Ajusta o banner para mobile */
-  .main-banner {
-    margin-top: 40px !important;
-    padding: 40px 15px;
-    position: relative;
-    overflow: hidden;
-    background-image: url('../images/slider-left-dec.png');
-  }
+  
 
-
-
-  .main-banner::after {
-    content: '';
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center bottom;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-  }
-
-  .main-banner .left-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-  }
-
-  .main-banner .left-content h2 {
-    font-size: 24px;
-    line-height: 30px;
-    color: #2a2a2a;
-  }
 
   .msg-princ {
     font-size: 28px;
@@ -915,72 +887,22 @@ Banner Style
 --------------------------------------------- 
 */
 
-.main-banner {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  padding: 80px 20px;
-  padding-left: 0px;
-  position: relative;
-  overflow: visible;
-}
 
-.main-banner img{
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  padding: 80px 20px;
-  padding-left: 0px;
-  position: relative;
-  overflow: visible;
-}
 
 .texto-completo{
   margin-left: -90px;
-  margin-top: 50px;
+  margin-top: 150px;
 }
 
-.main-banner:after {
-  content: '';
-  background-image: url(../images/slider-left-dec.png);
-  background-repeat: no-repeat;
-  background-size: 750px 640px;
-  position: absolute;
-  left: 2px;
-  bottom: 24px;
-  width: 90%; 
-  height: 111%;
-  z-index: 1;
-}
 
-.main-banner .left-content {
-  margin-right: 5px;
-}
-
-.main-banner .left-content h2 {
-  z-index: 2;
-  position: relative;
-  font-weight: 700;
-  line-height: 38px;
-  font-size: 40px;
-  margin-bottom: 21px;
-  color: #FFF;
-}
 
 .left-content {
   margin-left: 10%;
   text-align: left; 
 }
 
-@media (max-width: 991px) {
-  .left-content {
-    margin-left: 0;
-  }
-}
 
-.main-banner img {
-  display: none;
-}
+
 
 .msg-princ{
   font-size: 45px;
@@ -998,15 +920,7 @@ Banner Style
   font-size: 20px;
 }
 
-.main-banner .left-content p {
-  margin-bottom: 10px;
-  color: #000000; 
-  font-weight: 400;
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.85);
-  -webkit-background-clip: text; 
-  background-clip: text;
-}
+
 
 .about-us {
     padding-top: 20px !important;
@@ -1015,40 +929,49 @@ Banner Style
 
 .the-clients {
     margin-top: 70px !important;
-    background: linear-gradient(
+   /* background: linear-gradient(
       to bottom,
       #cee1f4 0%,    
       #f1f5fa 10%,    
       #ffffff 100%   
-    ) !important;
+    );*/
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
-.main-banner .left-content .first-button {
-  margin-right: 55px;
+.main-banner {
+  position: relative;
+  /*overflow: hidden;*/
 }
 
-.main-banner .left-content .white-button {
-  display: inline-block;
+.main-banner .right1-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
 }
 
-.main-banner .right-image {
-  display: flex;
-  justify-content: flex-start;
-  z-index: 20;
+.main-banner .right1-image img {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-.main-banner .right-image img {
-  max-width: 550px;
-  margin-left: 150px;
-}
-
-
-.main-banner .left-content .white-button a {
-  background-color: #4b8ef1;
-  color: #fff !important;
+.main-banner:after {
+  content: '';
+  background-image: url(../images/slider-left-dec.png);
+  background-repeat: no-repeat;
+  background-size: 750px 640px;
+  position: fixed;
+  left: 2px;
+  bottom: -60px;
+  width: 90%; 
+  height: 111%;
+  z-index: 1;
 }
 
 /* 
@@ -2217,14 +2140,7 @@ responsive
     padding-left: 0px;
   }
   
-  .main-banner .left-content h2 {
-    z-index: 2;
-    position: relative;
-    font-weight: 700;
-    line-height: 70px;
-    font-size: 50px;
-    margin-bottom: 20px;
-  }
+
 
   /*.main-banner .left-content p {
     margin-bottom: 45px;*/
@@ -2251,53 +2167,19 @@ responsive
   }
 
   /* ===== Banner ===== */
-   .main-banner {
-    text-align: center;
-    padding: 150px 0 30px 0;
-    background-image: none !important; 
-    background: linear-gradient(
-      to bottom,
-      #a9ccf0 0%,    
-      #e3efff 70%,    
-      #ffffff 100%    
-    ) !important;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
+  
 
-  .main-banner:after {
-    display: none; 
-  }
-
-  .main-banner .left-content {
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .main-banner .left-content h2 {
-    color: #2a2a2a;
-    font-size: 32px;
-    line-height: 38px;
-    margin-bottom: 20px;
-  }
-
-  .main-banner .left-content p {
-    color: #000;
-    margin-right: 0;
-  }
-
-  .main-banner .right-image {
-    margin: 30px auto 0;
-    text-align: center;
-  }
-
+  
   /* ===== Seções e componentes ===== */
   .services {
     padding-top: 1px;
     position: relative;
+    margin-top: -50px;
   }
 
+  .pricing-tables {
+    padding-top: 10px !important;
+  }
 
   .services .section-heading p {
     margin-top: 10px;
@@ -2343,6 +2225,99 @@ responsive
 }
 
 
+/* ===============================
+   Responsividade para Tablets
+   =============================== */
+@media (max-width: 992px) {
+  .main-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 15px;
+  }
+
+  .main-banner .left-content {
+    flex: 1 1 100%;
+    padding: 0;
+  }
+
+  .main-banner .left-content h2 {
+    font-size: 32px;
+    line-height: 38px;
+    color: #2a2a2a;
+  }
+
+  .main-banner .left-content p {
+    font-size: 18px;
+    line-height: 26px;
+    color: #000;
+  }
+
+  .main-banner .right1-image {
+    flex: 1 1 100%;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .main-banner .right1-image img {
+    max-width: 80%;
+  }
+
+  .main-banner:after {
+    background-size: cover;
+    opacity: 0.7;
+  }
+}
+
+/* ===============================
+   Responsividade para Celulares Médios (até 600px)
+   =============================== */
+@media (max-width: 600px) {
+  .main-banner {
+    padding: 60px 10px;
+  }
+
+  .main-banner .left-content h2 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .main-banner .left-content p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .main-banner .right1-image img {
+    max-width: 85%;
+  }
+}
+
+/* ===============================
+   Responsividade para Celulares Pequenos (até 400px)
+   =============================== */
+@media (max-width: 400px) {
+  .main-banner {
+    padding: 40px 10px;
+  }
+
+  .main-banner .left-content h2 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .main-banner .left-content p {
+    font-size: 15px;
+  }
+
+  .main-banner .right1-image img {
+    max-width: 90%;
+  }
+
+  .main-banner:after {
+    background-size: 120%;
+    opacity: 0.6;
+  }
+}
+
 /* ===================================================
    🔧 RESPONSIVIDADE UNIVERSAL (celulares, tablets etc.)
    =================================================== */
@@ -2362,6 +2337,11 @@ responsive
     z-index: 999;
     padding-bottom: 20px;
     border-top: 1px solid #eee;
+  }
+
+  .main-banner::after {
+    display: none !important;
+    content: none !important;
   }
 
   .header-area .main-nav .menu-trigger {
@@ -2408,21 +2388,7 @@ responsive
     text-align: center;
   }
 
-  .main-banner .left-content h2 {
-    font-size: 26px;
-    line-height: 34px;
-    text-align: center;
-  }
-
-  .main-banner .right-image {
-    justify-content: center;
-    margin-top: 30px;
-  }
-
-  .main-banner .right-image img {
-    max-width: 80%;
-    margin: 0 auto;
-  }
+  
 
   .section-heading h4 {
     font-size: 24px;
@@ -2435,40 +2401,59 @@ responsive
 }
 
 /* 🔹 Tablets (modo paisagem) */
-@media (min-width: 992px) and (max-width: 1200px) {
-  .main-banner .left-content h2 {
-    font-size: 32px;
+@media (min-width: 992px) {
+
+  /* IMAGEM 1: fundo azul (slider-left-dec.png) */
+  .main-banner::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background-image: url(../images/slider-left-dec.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom left;
+    z-index: 0;
+    opacity: 0.95;
   }
+
+  /* IMAGEM 2: mão com celular (slider-dec.png) */
+  .main-banner .right-image {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100%;
+    z-index: 2;
+  }
+
   .main-banner .right-image img {
-    max-width: 90%;
+    max-width: 520px !important;
+    width: 90% !important;
+    height: auto !important;
+    margin-bottom: -40px; /* faz ela tocar a borda inferior */
+    transform: none !important;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Garante que o texto fique acima do fundo azul */
+  .main-banner .left-content {
+    position: relative;
+    z-index: 3;
   }
 }
+
 
 /* 🔹 Telas muito pequenas (iPhone SE, Galaxy S8, etc.) */
 @media (max-width: 480px) {
   .header-area .logo img {
     width: 140px;
-  }
+  } 
 
-  .main-banner {
-    padding: 0px 15px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .main-banner:after {
-  position: absolute;
-  left: 2px;
-  bottom: 24px;
-  width: 90%; 
-  height: 111%;
-  z-index: 1;
-} 
-
-  .main-banner .left-content h2 {
-    font-size: 22px;
-    line-height: 28px;
-  }
+  
 
   .msg-princ {
     font-size: 28px;
