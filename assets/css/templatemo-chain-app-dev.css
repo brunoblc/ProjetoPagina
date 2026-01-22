@@ -906,7 +906,7 @@ Banner Style
 
 .msg-princ{
   font-size: 45px;
-  color: #ffffff;
+  color: #000000;
 }
 
 .msg-subt{
@@ -1755,7 +1755,7 @@ Footer Style
 */
 
 footer {
-  background-image: url(../images/footer-bg.png);
+  background-image: url(../images/footer1-bg.png);
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
