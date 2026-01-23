@@ -1294,6 +1294,7 @@ The Clients
 .the-clients  .section-heading p {
   margin-top: 10px;
   margin-left: 40px;
+  line-height: 40px;
 }
 
 .the-clients .naccs {
@@ -2641,7 +2642,7 @@ responsive
 }
 
 .destaque {
-  margin-left: 220px;
+  margin-left: 130px;
 } 
 
 .textosPagina{
