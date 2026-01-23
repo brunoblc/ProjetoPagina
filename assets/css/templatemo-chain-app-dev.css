@@ -301,7 +301,7 @@ header
 
 .background-header {
   background-color: #fff !important;
-  height: 80px!important;
+  /*height: 80px!important;*/
   border-bottom: none !important;
   position: fixed!important;
   top: 0px;
@@ -370,9 +370,9 @@ header
   line-height: 80px;
 }
 
-.background-header .main-nav .nav {
+/*.background-header .main-nav .nav {
   margin-top: -5px  !important;
-}
+}*/
 
 .header-area .main-nav .nav {
   float: right;
@@ -911,7 +911,7 @@ Banner Style
 
 .msg-subt{
   font-size: 20px;
-  line-height: 24px;
+  line-height: 38px;
   color: #000000;
 }
 
@@ -988,7 +988,7 @@ Services Style
 .services  .section-heading p {
   margin-top: 10px;
   margin-left: 40px;
-  line-height: 26px;
+  line-height: 35px;
 }
 
 .services .container-fluid {
@@ -1260,7 +1260,7 @@ About Us
 }
 
 .about-footer p {
-  margin: 5px 0;
+  margin: 25px 0;
 }
 
 @media (max-width: 991px) {
@@ -1290,15 +1290,10 @@ The Clients
   display: none;
 }
 
-.the-clients  .section-heading {
-  text-align: center;
-  margin-bottom: 50px;
-}
 
 .the-clients  .section-heading p {
   margin-top: 10px;
-  margin-left: 18%;
-  margin-right: 18%;
+  margin-left: 40px;
 }
 
 .the-clients .naccs {
@@ -1498,12 +1493,13 @@ The Clients
 }
 
 .pricing-tables  .section-heading {
-  text-align: center;
   margin-bottom: 40px;
+  margin-left: 180px;
 }
 
 .pricing-tables  .section-heading p {
-  margin-top: 10px;
+    margin-top: 10px;
+    line-height: 40px;
 }
 
 .pricing-item-regular {
@@ -1601,6 +1597,7 @@ The Clients
   z-index: 1;
   overflow: hidden;
   font-size: 20px;
+  margin-left: 40px;
 }
 
 .pricing-item-pro:before {
@@ -2283,7 +2280,7 @@ responsive
 
   .main-banner .left-content p {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 35px;;
   }
 
   .main-banner .right1-image img {
@@ -2398,6 +2395,18 @@ responsive
     font-size: 18px;
     line-height: 24px;
   }
+  .destaque {
+    margin-left: 0px !important;
+}
+.pricing-tables .section-heading {
+    margin-bottom: 40px;
+    margin-left: 0px !important;
+}
+
+.pricing-item-pro {
+    margin-left: 0px !important;
+}
+
 }
 
 /* 🔹 Tablets (modo paisagem) */
@@ -2443,6 +2452,14 @@ responsive
   .main-banner .left-content {
     position: relative;
     z-index: 3;
+  }
+  .investimento-row {
+    display: flex;
+    flex-direction: row-reverse; /* inverte ordem no desktop */
+    align-items: center;
+  }
+  .investimento-row .col-lg-8.offset-lg-2 {
+    margin: 0;
   }
 }
 
@@ -2611,4 +2628,26 @@ responsive
     .offset-lg-2 {
         margin-left: 0%;
     }
+}
+
+.row1 {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+
+.destaque {
+  margin-left: 220px;
+} 
+
+.textosPagina{
+  margin-left: 42px;
+}
+
+.texto-ajuste{
+  margin-top: 1px !important;
 }
